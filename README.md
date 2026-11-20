@@ -36,8 +36,8 @@ Evaluated in strict hierarchical order:
 | **R2** | Agent is unknown / not registered | **`BLOCK`** | Zero-trust security: untrusted entity Amazon has never authorized. |
 | **R3** | Agent registered to a different customer | **`BLOCK`** | Cross-account segregation: prevent agent from manipulating another customer's account. |
 | **R4** | `view_order` (read-only) | **`ALLOW`** | Zero financial or inventory impact (analogous to JPMorgan permitting balance inquiries). |
-| **R5** | `place_order` where amount <= ₹5,000 | **`ALLOW`** | Routine daily grocery/essential purchases; low risk and easily manageable via standard returns. |
-| **R6** | `place_order` where amount > ₹5,000 | **`ASK CUSTOMER`** | High-ticket purchases (smartphones, electronics) carry substantial financial and restocking risk. |
+| **R5** | `place_order` where amount <= ₹4,000 | **`ALLOW`** | Routine daily grocery/essential purchases; low risk and easily manageable via standard returns. |
+| **R6** | `place_order` where amount > ₹4,000 | **`ASK CUSTOMER`** | High-ticket purchases (smartphones, electronics) carry substantial financial and restocking risk. |
 | **R7** | `return` item | **`ASK CUSTOMER`** | Alters logistics, shipping, and inventory state; requires explicit customer confirmation. |
 | **R8** | `refund` (any amount) | **`ASK CUSTOMER`** | Transfers money out of Amazon; highest fraud vulnerability requiring customer step-up verification. |
 | **R9** | Any unmapped action | **`BLOCK`** | Default-deny policy: reject any unrecognized or unclassified action. |
