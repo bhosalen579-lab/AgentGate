@@ -4,7 +4,7 @@ from datetime import datetime
 
 ENROLMENT = "PGD202567167"
 COMPANY = "Amazon India"
-LIMIT = 5000          # Rs. limit for place_order without asking the customer
+LIMIT = 4000          # Rs. limit for place_order without asking the customer
 DB = "agentgate.db"
 ACTIONS = ["view_order", "place_order", "return", "refund"]
 
