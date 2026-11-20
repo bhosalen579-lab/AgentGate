@@ -66,4 +66,5 @@ To ensure full ownership and understanding of the code, I manually verified and 
 
 3. **Wells Fargo Compliance Validation:**  
    I verified that `revoke()` updates the `revoked_at` column with `datetime.now().strftime("%Y-%m-%d %H:%M:%S")`. This provides the customer with an immutable audit record proving exactly when agent authority was terminated, directly answering the requirement outlined in American Banker (Nov 2026).
-
+4. **Day 2 Spending Limit Tuning (Amazon Fresh Optimization):**  
+   I refined the autonomous order limit in `gatekeeper.py` to ₹4,000 to better align with typical Amazon Fresh daily grocery basket sizes, ensuring that larger discretionary electronics purchases consistently prompt customer approval under R6 while essential grocery orders execute seamlessly under R5.
